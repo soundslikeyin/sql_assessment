@@ -43,7 +43,7 @@ FROM users
 INNER JOIN progress ON users.user_id = progress.user_id
 WHERE city = 'New York';
 
--- What courses are the New Yorkers students taking?
+-- What courses are the Chicago students taking?
 SELECT 
 SUM(case when (learn_cpp = 'started' OR learn_cpp = 'completed') Then 1 else 0 end) as 'learn cpp',
 SUM(case when (learn_sql = 'started' OR learn_sql = 'completed') Then 1 else 0 end) as 'learn sql',
